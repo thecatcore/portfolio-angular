@@ -1,0 +1,22 @@
+<h2>Projects</h2>
+
+<div *ngFor="let project of projects">
+    <div class="project-block container">
+        <picture>
+            <source [srcset]="project.images.jxl" type="image/jxl" />
+            <source [srcset]="project.images.avif" type="image/avif" />
+            <img width="200" height="200" decoding="async" loading="lazy" [src]="project.images.original" alt="{{project.name}} icon`">
+        </picture>
+        <div class="project-infos">
+            <h3>
+                <!-- <RouterLink :to="`/project/${project.id}`">
+                    {{ project.name }}
+                </RouterLink> (<a :href="project.link">Github</a>) -->
+            </h3>
+            <p class="project-date">{{ project.dates.start + " - " + project.dates.end}}</p>
+            <p class="project-techs">Techs: {{ project.techs.join(", ") }}</p>
+            <p class="project-role">Role: {{ project.role }}</p>
+            <p class="project-desc">{{ project.id }}</p>
+        </div>
+    </div>
+</div>

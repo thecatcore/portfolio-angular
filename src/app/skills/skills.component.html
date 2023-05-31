@@ -1,0 +1,27 @@
+<h2>Skills</h2>
+<div class="container skill-container">
+    <div>
+        <h3>Front</h3>
+        <div *ngFor="let skill of frontSkills">
+            {{ skill.name }}
+        </div>
+    </div>
+    <div>
+        <h3>FullStack</h3>
+        <div *ngFor="let skill of commonSkills">
+            {{ skill.name }}
+        </div>
+    </div>
+    <div>
+        <h3>Back</h3>
+        <div *ngFor="let skill of backSkills">
+            {{ skill.name }}
+        </div>
+    </div>
+    <div>
+        <h3>Tools</h3>
+        <div *ngFor="let tool of skills.tools">
+            {{ tool }}
+        </div>
+    </div>
+</div>
